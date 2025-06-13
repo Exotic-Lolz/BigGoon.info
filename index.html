@@ -16,7 +16,7 @@
     .background {
       position: fixed;
       top: 0; left: 0; right: 0; bottom: 0;
-      background: url('https://media.discordapp.net/attachments/1306324563134517360/1381424482215919616/IMG_3279.png?ex=684d660e&is=684c148e&hm=f3595afff97c623985460d635843eb9290f826268f30ff0642a0a6d037718165&=&format=webp&quality=lossless') no-repeat center center fixed;
+      background: url('https://cdn.discordapp.com/attachments/1306324563134517360/1381424482215919616/IMG_3279.png?ex=684d660e&is=684c148e&hm=f3595afff97c623985460d635843eb9290f826268f30ff0642a0a6d037718165') no-repeat center center fixed;
       background-size: cover;
       filter: blur(8px) brightness(0.6);
       z-index: -2;
@@ -28,7 +28,7 @@
       display: flex;
       justify-content: center;
       align-items: flex-start;
-      padding-top: 15vh; /* Raise the text */
+      padding-top: 15vh; /* Final position */
     }
 
     .overlay::before {
@@ -47,6 +47,9 @@
       text-align: center;
       text-shadow: 0 0 10px rgba(255, 255, 255, 0.5),
                    0 0 20px rgba(255, 255, 255, 0.3);
+
+      /* Entrance animation */
+      animation: riseIn 1s ease-out forwards;
     }
 
     h1 span {
@@ -54,7 +57,7 @@
       animation: jiggle 1s infinite ease-in-out alternate;
     }
 
-    /* Unsynced animation delays */
+    /* Unsynced jiggle delays */
     h1 span:nth-child(1)  { animation-delay: 0s; }
     h1 span:nth-child(2)  { animation-delay: 0.2s; }
     h1 span:nth-child(3)  { animation-delay: 0.4s; }
@@ -69,10 +72,23 @@
     h1 span:nth-child(12) { animation-delay: 0.6s; }
     h1 span:nth-child(13) { animation-delay: 0.3s; }
 
+    /* Jiggle effect */
     @keyframes jiggle {
       0% { transform: translateY(0) rotate(0deg); }
       50% { transform: translateY(-2px) rotate(-2deg); }
       100% { transform: translateY(2px) rotate(2deg); }
+    }
+
+    /* Entrance effect */
+    @keyframes riseIn {
+      0% {
+        transform: translateY(50px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
     }
   </style>
 </head>
