@@ -16,10 +16,10 @@
     .background {
       position: fixed;
       top: 0; left: 0; right: 0; bottom: 0;
-      background: url('https://source.unsplash.com/1600x900/?abstract,blur') no-repeat center center fixed;
+      background: url('https://media.discordapp.net/attachments/1306324563134517360/1381424482215919616/IMG_3279.png?ex=684d660e&is=684c148e&hm=f3595afff97c623985460d635843eb9290f826268f30ff0642a0a6d037718165&=&format=webp&quality=lossless') no-repeat center center fixed;
       background-size: cover;
-      filter: blur(8px);
-      z-index: -1; /* Stay behind the text */
+      filter: blur(8px) brightness(0.6);
+      z-index: -2;
     }
 
     .overlay {
@@ -27,14 +27,15 @@
       top: 0; left: 0; right: 0; bottom: 0;
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start;
+      padding-top: 15vh; /* Raise the text */
     }
 
     .overlay::before {
       content: "";
       position: absolute;
       top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0, 0, 0, 0.4);
+      background: rgba(0, 0, 0, 0.3);
       z-index: -1;
     }
 
@@ -44,7 +45,7 @@
       font-size: 4rem;
       color: white;
       text-align: center;
-      text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.5),
                    0 0 20px rgba(255, 255, 255, 0.3);
     }
 
@@ -53,16 +54,16 @@
       animation: jiggle 1s infinite ease-in-out alternate;
     }
 
-    /* Give each letter a unique random delay for unsynced jiggle */
-    h1 span:nth-child(1) { animation-delay: 0s; }
-    h1 span:nth-child(2) { animation-delay: 0.2s; }
-    h1 span:nth-child(3) { animation-delay: 0.4s; }
-    h1 span:nth-child(4) { animation-delay: 0.1s; }
-    h1 span:nth-child(5) { animation-delay: 0.3s; }
-    h1 span:nth-child(6) { animation-delay: 0.5s; }
-    h1 span:nth-child(7) { animation-delay: 0.15s; }
-    h1 span:nth-child(8) { animation-delay: 0.35s; }
-    h1 span:nth-child(9) { animation-delay: 0.55s; }
+    /* Unsynced animation delays */
+    h1 span:nth-child(1)  { animation-delay: 0s; }
+    h1 span:nth-child(2)  { animation-delay: 0.2s; }
+    h1 span:nth-child(3)  { animation-delay: 0.4s; }
+    h1 span:nth-child(4)  { animation-delay: 0.1s; }
+    h1 span:nth-child(5)  { animation-delay: 0.3s; }
+    h1 span:nth-child(6)  { animation-delay: 0.5s; }
+    h1 span:nth-child(7)  { animation-delay: 0.15s; }
+    h1 span:nth-child(8)  { animation-delay: 0.35s; }
+    h1 span:nth-child(9)  { animation-delay: 0.55s; }
     h1 span:nth-child(10) { animation-delay: 0.25s; }
     h1 span:nth-child(11) { animation-delay: 0.45s; }
     h1 span:nth-child(12) { animation-delay: 0.6s; }
